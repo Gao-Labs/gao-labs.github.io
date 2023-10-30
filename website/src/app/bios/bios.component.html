@@ -1,0 +1,12 @@
+<mat-card *ngFor="let person of people">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <!-- Headshot here -->
+      </div>
+      <mat-card-title>{{ person.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{ person.bio }}
+    </mat-card-content>
+  </mat-card>
+  

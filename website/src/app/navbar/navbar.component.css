@@ -1,0 +1,10 @@
+.active-link {
+    background-color: #1976D2; /* Change this color to your preference */
+    color: white;
+  }
+.navbar {
+    flex: 1;
+    justify-content: flex-start;
+    gap: 10px;
+}
+  
