@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { HomepageComponent } from './homepage/homepage.component';
 import { BiosComponent } from './bios/bios.component';
 import { PublicationsComponent } from './publications/publications.component';
@@ -9,11 +8,10 @@ const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'bios', component: BiosComponent },
   { path: 'publications', component: PublicationsComponent },
-  // Add more routes for other pages if needed
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

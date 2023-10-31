@@ -1,6 +1,20 @@
 <mat-toolbar color="primary" class="navbar">
-   <span routerLink="/" routerLinkActive="active-link">Home</span>
-   <span routerLink="/bios" routerLinkActive="active-link">Bios</span>
-   <span routerLink="/publications" routerLinkActive="active-link">Publications</span>
-  </mat-toolbar>
-  
+  <span
+    [class.no-selection]="true"
+    [routerLink]="['/']"
+    routerLinkActive="active-link"
+    >Home</span
+  >
+  <span
+    [class.no-selection]="true"
+    [routerLink]="['/bios']"
+    routerLinkActive="active-link"
+    >Bios</span
+  >
+  <span
+    [class.no-selection]="true"
+    [routerLink]="['/publications']"
+    routerLinkActive="active-link"
+    >Publications</span
+  >
+</mat-toolbar>

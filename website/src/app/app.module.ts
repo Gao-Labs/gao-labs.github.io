@@ -4,27 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PublicationsComponent } from './publications/publications.component';
 import { BiosModule } from './bios/bios.module';
 import { HomepageModule } from './homepage/homepage.module';
 import { NavbarModule } from './navbar/navbar.module';
-
-
+import { PublicationsModule } from './publications/publications.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PublicationsComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BiosModule,
+    PublicationsModule,
     HomepageModule,
-    NavbarModule
+    NavbarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
