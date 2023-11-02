@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-bios',
   templateUrl: './bios.component.html',
-  styleUrls: ['./bios.component.css']
+  styleUrls: ['./bios.component.css'],
 })
 export class BiosComponent {
   people: any[] = [
@@ -20,7 +20,11 @@ export class BiosComponent {
       name: 'Bob Johnson',
       bio: 'Bob Johnson is an associate professor focusing on...',
     },
+    {
+      name: 'Erin Murphy',
+      bio: 'erin is a developer',
+    },
+
     // Add more people as needed
   ];
-
 }
