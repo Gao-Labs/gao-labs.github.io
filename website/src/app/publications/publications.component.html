@@ -1,6 +1,32 @@
-<h2>Research Publications</h2>
-<ul>
-  <li><a href="#">Publication 1</a></li>
-  <li><a href="#">Publication 2</a></li>
-  <!-- Add more publication links as needed -->
-</ul>
+<div class="page">
+  <div class="pubs-col-container">
+    <div>
+      <h2>Research Publications</h2>
+      <ul>
+        <li><a href="#">Publication 1</a></li>
+        <li><a href="#">Publication 2</a></li>
+      </ul>
+    </div>
+    <div>
+      <mat-card class="bio-card" *ngFor="let pub of pubs">
+        <mat-card-header class="card-header">
+          <mat-card-title
+            ><a href="{{ pub.link }}">{{ pub.title }}</a></mat-card-title
+          >
+          <mat-card-subtitle>{{ pub.authors }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          class="headshot-image"
+          mat-card-image
+          src="{{ pub.image }}"
+          alt="Image for {{ pub.title }}"
+        />
+        <mat-card-content>
+          <p class="bio-container">
+            {{ pub.description }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
