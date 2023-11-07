@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BiosModule } from './bios/bios.module';
 import { HomepageModule } from './homepage/homepage.module';
-import { NavbarModule } from './navbar/navbar.module';
 import { PublicationsModule } from './publications/publications.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,7 +20,8 @@ import { PublicationsModule } from './publications/publications.module';
     BiosModule,
     PublicationsModule,
     HomepageModule,
-    NavbarModule,
+    MatToolbarModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
