@@ -1,3 +1,41 @@
+.page {
+  padding: 20px;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  gap: 14px;
+  justify-content: center;
+}
 .bio-card {
-  max-width: 400px;
+  max-width: 260px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: left;
+  background-color: #f1f1f1;
+}
+.contact-buttons {
+  justify-content: space-evenly;
+}
+.bio-container-truncated {
+  margin-block: 12px;
+  width: 220px;
+  /* need automatic multi-line height */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+.bio-container-open {
+  width: 220px;
+  white-space: normal;
+  text-overflow: inherit;
+}
+.headshot-image {
+  padding-inline: 30px;
+  /* How to get image a bit smaller  */
+}
+.card-header {
+  margin: 5px;
 }
