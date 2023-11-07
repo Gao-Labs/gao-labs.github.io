@@ -1,20 +1,5 @@
 <mat-toolbar color="primary" class="navbar">
-  <span
-    [class.no-selection]="true"
-    [routerLink]="['/']"
-    routerLinkActive="active-link"
-    >Home</span
-  >
-  <span
-    [class.no-selection]="true"
-    [routerLink]="['/bios']"
-    routerLinkActive="active-link"
-    >Bios</span
-  >
-  <span
-    [class.no-selection]="true"
-    [routerLink]="['/publications']"
-    routerLinkActive="active-link"
-    >Publications</span
-  >
+  <div mat-button routerLink="/">Home</div>
+  <div mat-button routerLink="/bios">Bios</div>
+  <div mat-button routerLink="/publications">Publications</div>
 </mat-toolbar>
