@@ -1,7 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
+name: Angular CI/CD to GitHub Pages
 
 on:
   push:
@@ -10,12 +7,11 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [14.x, 18.x, 20.x] # Use the versions that you need
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
@@ -30,7 +26,18 @@ jobs:
       run: npm ci
     
     - name: Build Angular App
-      run: npm run build --if-present
-      working-directory: website/
+      run: npm run build # It will use the build command defined in package.json
+      # No need for working-directory if the root is correct
       
-    - run: npm test
+    - name: Run Tests
+      run: npm test # It will use the test command defined in package.json
+
+    # This step will only run when the workflow is triggered by a push to the main branch
+    # and when the matrix is using the Node.js version 20.x
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main' && matrix.node-version == '20.x'
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: main # The branch you are deploying to (GitHub Pages)
+        folder: docs # The folder that your Angular app is outputting to (configured in angular.json)
+        token: ${{ secrets.GITHUB_TOKEN }} # GitHub automatically creates this secret to use in workflows
