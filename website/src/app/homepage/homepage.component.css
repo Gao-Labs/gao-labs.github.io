@@ -4,6 +4,9 @@
 .card-2 {
   display: flex;
   flex-direction: row;
+  padding-inline: 20px;
+  padding-top: 20px;
+  margin-bottom: 10px
 }
 .welcome-container {
   padding: 30px;

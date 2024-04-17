@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BioDialogComponent } from '../components/bio-dialog.component';
+
+export type Person = { name: string , bio: string, title: string, image: string}
+
 
 @Component({
   selector: 'app-bios',
@@ -6,9 +11,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./bios.component.css'],
 })
 export class BiosComponent {
+
+  constructor(private dialog: MatDialog){}
   imageDir = '../../assets/headshots/';
 
-  coreStaff: any[] = [
+
+  openBioDialog(person: Person) {
+    this.dialog.open(BioDialogComponent, {
+      data: person 
+    });
+    console.log(person)
+  }
+
+  coreStaff: Person[] = [
     {
       name: 'Dr. H. Oliver Gao',
       title: 'Lab Head',
@@ -27,53 +42,13 @@ export class BiosComponent {
       bio: 'Erin is one of the staff developers at Gao Labs.',
       image: this.imageDir + 'erin-headshot.png',
     },
-    {
-      name: 'Bob Johnson',
-      title: 'PhD Student',
-      bio: 'Bob Johnson is a PhD student focusing on...',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-    {
-      name: 'Bob Johnson',
-      title: 'PhD Student',
-      bio: 'Bob Johnson is a PhD student focusing on...',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-    {
-      name: 'Bob Johnson',
-      title: 'PhD Student',
-      bio: 'Bob Johnson is a PhD student focusing on...',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
     // Add more people as needed
   ];
 
   phdStudents: any[] = [
-    {
-      name: 'Bob Johnson',
-      title: 'PhD Student',
-      bio: 'Bob Johnson is a PhD student focusing on...',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-    {
-      name: 'Bob Johnson',
-      title: 'PhD Student',
-      bio: 'Bob Johnson is a PhD student focusing on...',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
+    
   ];
   mastersStudents: any[] = [
-    {
-      name: 'Bob Johnson',
-      title: 'PhD Student',
-      bio: 'Bob Johnson is a PhD student focusing on...',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-    {
-      name: 'Bob Johnson',
-      title: 'PhD Student',
-      bio: 'Bob Johnson is a PhD student focusing on...',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
+    
   ];
 }

@@ -10,6 +10,7 @@ import { PublicationsModule } from './publications/publications.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -22,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomepageModule,
     MatToolbarModule,
     MatButtonModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

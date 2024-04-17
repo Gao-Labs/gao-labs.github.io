@@ -1,0 +1,9 @@
+.card-content {
+    flex-direction: row;
+    flex: 1;
+}
+.headshot-image {
+padding-inline: 30px;
+width: 240px;
+/* How to get image a bit smaller  */
+}
