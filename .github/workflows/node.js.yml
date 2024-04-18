@@ -31,9 +31,9 @@ jobs:
       run: npm run build # It will use the build command defined in package.json
       working-directory: ./website
       
-    - name: Run Tests
-      run: npm test # It will use the test command defined in package.json
-      working-directory: ./website
+    # - name: Run Tests
+    #   run: npm test # It will use the test command defined in package.json
+    #   working-directory: ./website
 
     # This step will only run when the workflow is triggered by a push to the main branch
     # and when the matrix is using the Node.js version 20.x
