@@ -5,5 +5,6 @@ export type Person = {
     image: string, 
     linkedinUrl?: string, 
     websiteUrl?: string,
-    email?: string 
+    email?: string,
+    githubUrl?: string
 }

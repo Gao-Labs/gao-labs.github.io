@@ -13,9 +13,10 @@
     />
   </mat-card-content>
   <mat-card-actions class="contact-buttons">
-    <button mat-button>LinkedIn</button>
-    <button mat-button>Website</button>
-    <!-- Eventually link to social media -->
+    <button mat-button (click)="openEmail(person.email)" *ngIf="person.email">Email</button>
+    <button mat-button (click)="openLink(person.websiteUrl)" *ngIf="person.websiteUrl">Website</button>
+    <button mat-button (click)="openLink(person.linkedinUrl)" *ngIf="person.linkedinUrl">LinkedIn</button>
+    <button mat-button (click)="openLink(person.githubUrl)" *ngIf="person.githubUrl">GitHub</button>
   </mat-card-actions>
     <mat-card-content>
       <p class="bio-container">

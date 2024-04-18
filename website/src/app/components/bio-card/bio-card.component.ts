@@ -14,12 +14,19 @@ import { Person } from "src/app/types/Person.type";
 
     constructor(private dialog: MatDialog){}
 
-
-
     openBioDialog(person: Person) {
         this.dialog.open(BioDialogComponent, {
           data: person 
         });
         console.log(person)
       }
+
+    openLink(url: string) {
+        window.open(url, "_blank")
+    }
+
+    openEmail(email: string) {
+        window.open(`mailto:${email}`);
+      }
+      
   }
