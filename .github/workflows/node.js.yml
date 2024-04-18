@@ -41,6 +41,6 @@ jobs:
       if: github.ref == 'refs/heads/main' && matrix.node-version == '20.x'
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: main # The branch you are deploying to (GitHub Pages)
+        branch: gh-pages # The branch you are deploying to (GitHub Pages)
         folder: docs # The folder that your Angular app is outputting to (configured in angular.json)
         token: ${{ secrets.GITHUB_TOKEN }} # GitHub automatically creates this secret to use in workflows
