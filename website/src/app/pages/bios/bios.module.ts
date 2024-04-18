@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { BiosComponent } from './bios.component';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   declarations: [BiosComponent],
-  imports: [MatCardModule, CommonModule, MatButtonModule],
+  imports: [CommonModule, ComponentsModule],
   exports: [BiosComponent],
 })
 export class BiosModule {}

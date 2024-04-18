@@ -1,1 +1,0 @@
-type Person = { name: string , bio: string, title: string, image: string}

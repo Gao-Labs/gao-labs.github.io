@@ -5,26 +5,31 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
-
+import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
+import { BioCardComponent } from './bio-card/bio-card.component';
 
 
 
 @NgModule({
   declarations: [
-    // other components
     BioDialogComponent,
-    NavbarComponent
+    NavbarComponent,
+    BioCardComponent
   ],
   imports: [
     // other modules
     MatDialogModule,
     MatToolbarModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    CommonModule
   ],
   exports: [
     BioDialogComponent,
-    NavbarComponent
+    NavbarComponent,
+    BioCardComponent
   ]
 })
 export class ComponentsModule { }

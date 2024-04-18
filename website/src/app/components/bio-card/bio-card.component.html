@@ -1,0 +1,28 @@
+<mat-card class="bio-card">
+    <mat-card-header class="card-header">
+      <mat-card-title>{{ person.name }}</mat-card-title>
+      <mat-card-subtitle>{{ person.title }}</mat-card-subtitle>
+      <!-- Include project tags: CAT, uTECH etc -->
+    </mat-card-header>
+    <mat-card-content>
+    <img
+      class="headshot-image"
+      mat-card-image
+      src="{{ person.image }}"
+      alt="Professional headshot of {{ person.name }}"
+    />
+  </mat-card-content>
+  <mat-card-actions class="contact-buttons">
+    <button mat-button>LinkedIn</button>
+    <button mat-button>Website</button>
+    <!-- Eventually link to social media -->
+  </mat-card-actions>
+    <mat-card-content>
+      <p class="bio-container">
+        {{ person.bio }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="contact-buttons">
+      <button mat-button (click)="openBioDialog(person)">See more...</button>
+    </mat-card-actions>
+  </mat-card>

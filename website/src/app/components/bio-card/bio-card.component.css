@@ -1,0 +1,33 @@
+.bio-card {
+    max-width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: #f1f1f1;
+    max-height: 600px;
+    
+}
+
+.contact-buttons {
+    justify-content: space-evenly;
+}
+
+.card-header {
+    margin: 5px;
+}
+
+.headshot-image {
+    padding-inline: 30px;
+    width: 240px;
+    /* How to get image a bit smaller  */
+}
+
+.bio-container {
+    width: 260px; /* Adjust width as needed */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* Number of lines you want to display before truncating */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    flex-shrink: 1;
+}

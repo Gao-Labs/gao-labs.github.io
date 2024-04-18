@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { BioDialogComponent } from '../../components/bio-dialog/bio-dialog.component';
-
-export type Person = { name: string , bio: string, title: string, image: string}
+import { Person } from 'src/app/types/Person.type';
 
 
 @Component({
@@ -12,16 +9,7 @@ export type Person = { name: string , bio: string, title: string, image: string}
 })
 export class BiosComponent {
 
-  constructor(private dialog: MatDialog){}
   imageDir = '../../assets/headshots/';
-
-
-  openBioDialog(person: Person) {
-    this.dialog.open(BioDialogComponent, {
-      data: person 
-    });
-    console.log(person)
-  }
 
   coreStaff: Person[] = [
     {

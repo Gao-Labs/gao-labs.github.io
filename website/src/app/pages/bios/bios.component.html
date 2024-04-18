@@ -1,95 +1,14 @@
 <div class="page">
   <h1>Core Staff</h1>
   <div class="card-container">
-    <mat-card class="bio-card" *ngFor="let person of coreStaff">
-      <mat-card-header class="card-header">
-        <mat-card-title>{{ person.name }}</mat-card-title>
-        <mat-card-subtitle>{{ person.title }}</mat-card-subtitle>
-        <!-- Include project tags: CAT, uTECH etc -->
-      </mat-card-header>
-      <mat-card-content>
-      <img
-        class="headshot-image"
-        mat-card-image
-        src="{{ person.image }}"
-        alt="Professional headshot of {{ person.name }}"
-      />
-    </mat-card-content>
-    <mat-card-actions class="contact-buttons">
-      <button mat-button>LinkedIn</button>
-      <button mat-button>Website</button>
-      <!-- Eventually link to social media -->
-    </mat-card-actions>
-      <mat-card-content>
-        <p class="bio-container">
-          {{ person.bio }}
-        </p>
-      </mat-card-content>
-      <mat-card-actions class="contact-buttons">
-        <button mat-button (click)="openBioDialog(person)">See more...</button>
-      </mat-card-actions>
-    </mat-card>
+    <app-bio-card *ngFor="let person of coreStaff" [person]="person"/>
   </div>
   <h1>PhD Students</h1>
   <div class="card-container">
-    <mat-card class="bio-card" *ngFor="let person of phdStudents">
-      <mat-card-header class="card-header">
-        <mat-card-title>{{ person.name }}</mat-card-title>
-        <mat-card-subtitle>{{ person.title }}</mat-card-subtitle>
-        <!-- Include project tags: CAT, uTECH etc -->
-      </mat-card-header>
-      <mat-card-content>
-      <img
-        class="headshot-image"
-        mat-card-image
-        src="{{ person.image }}"
-        alt="Professional headshot of {{ person.name }}"
-      />
-    </mat-card-content>
-    <mat-card-actions class="contact-buttons">
-      <button mat-button>Email</button>
-      <button mat-button>Website</button>
-      <!-- Eventually link to social media -->
-    </mat-card-actions>
-      <mat-card-content>
-        <p class="bio-container">
-          {{ person.bio }}
-        </p>
-      </mat-card-content>
-      <mat-card-actions class="contact-buttons">
-        <button mat-button (click)="openBioDialog(person)">See more...</button>
-      </mat-card-actions>
-    </mat-card>
+    <app-bio-card *ngFor="let person of phdStudents" [person]="person"/>
   </div>
   <h1>Master's Students</h1>
   <div class="card-container">
-    <mat-card class="bio-card" *ngFor="let person of mastersStudents">
-      <mat-card-header class="card-header">
-        <mat-card-title>{{ person.name }}</mat-card-title>
-        <mat-card-subtitle>{{ person.title }}</mat-card-subtitle>
-        <!-- Include project tags: CAT, uTECH etc -->
-      </mat-card-header>
-      <mat-card-content>
-      <img
-        class="headshot-image"
-        mat-card-image
-        src="{{ person.image }}"
-        alt="Professional headshot of {{ person.name }}"
-      />
-    </mat-card-content>
-    <mat-card-actions class="contact-buttons">
-      <button mat-button>Email</button>
-      <button mat-button>Website</button>
-      <!-- Eventually link to social media -->
-    </mat-card-actions>
-      <mat-card-content>
-        <p class="bio-container">
-          {{ person.bio }}
-        </p>
-      </mat-card-content>
-      <mat-card-actions class="contact-buttons">
-        <button mat-button (click)="openBioDialog(person)">See more...</button>
-      </mat-card-actions>
-    </mat-card>
+    <app-bio-card *ngFor="let person of mastersStudents" [person]="person"/>
   </div>
 </div>
