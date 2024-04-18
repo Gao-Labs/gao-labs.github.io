@@ -9,7 +9,6 @@ import { HomepageModule } from './pages/homepage/homepage.module';
 import { PublicationsModule } from './pages/publications/publications.module';
 import { MatButtonModule } from '@angular/material/button';
 import { ComponentsModule } from './components/components.module';
-import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [AppComponent],

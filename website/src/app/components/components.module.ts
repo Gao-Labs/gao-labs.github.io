@@ -4,6 +4,8 @@ import { BioDialogComponent } from './bio-dialog/bio-dialog.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -17,7 +19,8 @@ import { MatButtonModule } from '@angular/material/button';
     // other modules
     MatDialogModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ],
   exports: [
     BioDialogComponent,
