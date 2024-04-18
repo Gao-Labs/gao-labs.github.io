@@ -4,16 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BiosModule } from './bios/bios.module';
-import { HomepageModule } from './homepage/homepage.module';
-import { PublicationsModule } from './publications/publications.module';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { BiosModule } from './pages/bios/bios.module';
+import { HomepageModule } from './pages/homepage/homepage.module';
+import { PublicationsModule } from './pages/publications/publications.module';
 import { MatButtonModule } from '@angular/material/button';
-import { NavbarComponent } from './navbar/navbar.component';
 import { ComponentsModule } from './components/components.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,9 +20,8 @@ import { ComponentsModule } from './components/components.module';
     BiosModule,
     PublicationsModule,
     HomepageModule,
-    MatToolbarModule,
     MatButtonModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

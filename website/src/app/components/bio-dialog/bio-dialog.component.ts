@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Person } from '../bios/bios.component';
+import { Person } from '../../pages/bios/bios.component';
 
 @Component({
   selector: 'app-bio-dialog',

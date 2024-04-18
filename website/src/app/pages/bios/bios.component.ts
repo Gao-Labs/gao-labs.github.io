@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { BioDialogComponent } from '../components/bio-dialog.component';
+import { BioDialogComponent } from '../../components/bio-dialog/bio-dialog.component';
 
 export type Person = { name: string , bio: string, title: string, image: string}
 
