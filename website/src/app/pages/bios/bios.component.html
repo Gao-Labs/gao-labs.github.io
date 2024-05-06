@@ -1,14 +1,10 @@
 <div class="page">
-  <h1>Core Staff</h1>
+  <mat-form-field class="search-bar">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput type="text" [(ngModel)]="searchValue" (input)="onSearch(searchValue)" placeholder="Search for a name...">
+  </mat-form-field>
+  <h1>Lab Members</h1>
   <div class="card-container">
-    <app-bio-card *ngFor="let person of coreStaff" [person]="person"/>
-  </div>
-  <h1>PhD Students</h1>
-  <div class="card-container">
-    <app-bio-card *ngFor="let person of phdStudents" [person]="person"/>
-  </div>
-  <h1>Master's Students</h1>
-  <div class="card-container">
-    <app-bio-card *ngFor="let person of mastersStudents" [person]="person"/>
+    <app-bio-card *ngFor="let person of filteredPeople" [person]="person"/>
   </div>
 </div>

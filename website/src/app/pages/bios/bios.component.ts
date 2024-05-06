@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { people } from 'src/app/consts/bios.const';
 import { Person } from 'src/app/types/Person.type';
 
 
@@ -10,6 +11,26 @@ import { Person } from 'src/app/types/Person.type';
 export class BiosComponent {
 
   imageDir = '../../assets/headshots/';
+  public searchValue = ""
+  
+
+  onSearch(searchTerm: string) {
+    let tempPeople = people;
+    console.log("searching with term " + searchTerm)
+    if (searchTerm) {
+      tempPeople = tempPeople.filter((person) =>
+        person.name
+          ? person.name
+              .toLowerCase()
+              .includes(searchTerm.toLowerCase())
+          : false
+      );
+    }
+    this.filteredPeople = tempPeople;
+  }
+
+
+filteredPeople = people
 
   coreStaff: Person[] = [
     {
@@ -29,13 +50,16 @@ export class BiosComponent {
     },
     {
       name: 'Erin Murphy',
-      title: 'Program Analyst',
+      title: 'Programmer',
+      team: "uTech",
+      role: "PPS Multi-City Developer",
       bio: 'Erin is one of the staff developers at Gao Labs and a primary contributor to the uTech/PPS projects. She built this website using Angular and TypeScript.',
       image: this.imageDir + 'erinheadshot3.JPG',
       linkedinUrl: "https://www.linkedin.com/in/erinmurphy843/",
-      githubUrl: "https://github.com/em843"
+      githubUrl: "https://github.com/em843",
+      email: "erinmurphy843@gmail.com"
     },
-    // Add more people as needed
+    
   ];
 
   phdStudents: any[] = [

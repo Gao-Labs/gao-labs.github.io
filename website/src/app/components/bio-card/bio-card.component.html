@@ -2,21 +2,34 @@
     <mat-card-header class="card-header">
       <mat-card-title>{{ person.name }}</mat-card-title>
       <mat-card-subtitle>{{ person.title }}</mat-card-subtitle>
-      <!-- Include project tags: CAT, uTECH etc -->
+      <mat-card-subtitle *ngIf="person.role && person.team">{{ person.role }} for {{person.team}}</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="person.role && !person.team">{{ person.role }}</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="person.team && !person.role">{{person.team}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-    <img
+    <img mat-card-image
       class="headshot-image"
       mat-card-image
       src="{{ person.image }}"
       alt="Professional headshot of {{ person.name }}"
+      (error)="handleImageError($event)"
     />
   </mat-card-content>
   <mat-card-actions class="contact-buttons">
-    <button mat-button (click)="openEmail(person.email)" *ngIf="person.email">Email</button>
-    <button mat-button (click)="openLink(person.websiteUrl)" *ngIf="person.websiteUrl">Website</button>
-    <button mat-button (click)="openLink(person.linkedinUrl)" *ngIf="person.linkedinUrl">LinkedIn</button>
-    <button mat-button (click)="openLink(person.githubUrl)" *ngIf="person.githubUrl">GitHub</button>
+    <button mat-button (click)="openEmail(person.email)" *ngIf="person.email" class="icon-button">
+      <mat-icon class="button-icon">email</mat-icon>
+    </button>
+    <button mat-button (click)="openLink(person.websiteUrl)" *ngIf="person.websiteUrl" class="icon-button">
+      <mat-icon class="button-icon">link</mat-icon>
+    </button>
+    <button mat-button (click)="openLink(person.linkedinUrl)" *ngIf="person.linkedinUrl" class="icon-button"> 
+      <img class="button-icon" src="../../../assets/logos/LinkedIn_icon.svg"/>
+      <!-- <mat-icon svgIcon="linkedin" class="button-icon"></mat-icon> -->
+    </button>
+    <button mat-button (click)="openLink(person.githubUrl)" *ngIf="person.githubUrl" class="icon-button github-icon">
+      <img class="button-icon" src="../../../assets/logos/github-mark.svg"/>
+      <!-- <mat-icon svgIcon="github" class="button-icon"></mat-icon> -->
+    </button>
   </mat-card-actions>
     <mat-card-content>
       <p class="bio-container">

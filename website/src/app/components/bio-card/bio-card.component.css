@@ -11,6 +11,22 @@
     justify-content: space-evenly;
 }
 
+.icon-button {
+    align-items: center;
+    justify-content: center;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    align-items: center;
+}
+
+/* .github-icon {
+    transform: scale(0.75);
+
+} */
+
 .card-header {
     margin: 5px;
 }
@@ -31,3 +47,4 @@
     flex: 1;
     flex-shrink: 1;
 }
+

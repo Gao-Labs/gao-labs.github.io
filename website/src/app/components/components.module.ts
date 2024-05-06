@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { BioCardComponent } from './bio-card/bio-card.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -24,7 +25,8 @@ import { BioCardComponent } from './bio-card/bio-card.component';
     MatButtonModule,
     RouterModule,
     MatCardModule,
-    CommonModule
+    CommonModule,
+    MatIconModule
   ],
   exports: [
     BioDialogComponent,

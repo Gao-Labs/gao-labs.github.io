@@ -27,6 +27,12 @@ import { Person } from "src/app/types/Person.type";
 
     openEmail(email: string) {
         window.open(`mailto:${email}`);
-      }
+    }
+    
+    handleImageError(event: any) {
+      console.log('Failed to load image', event);
+      event.target.src = '../../../assets/headshots/default_headshot.jpeg';
+    }
+      
       
   }

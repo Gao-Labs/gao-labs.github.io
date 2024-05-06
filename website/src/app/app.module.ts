@@ -9,6 +9,8 @@ import { HomepageModule } from './pages/homepage/homepage.module';
 import { PublicationsModule } from './pages/publications/publications.module';
 import { MatButtonModule } from '@angular/material/button';
 import { ComponentsModule } from './components/components.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +23,7 @@ import { ComponentsModule } from './components/components.module';
     HomepageModule,
     MatButtonModule,
     ComponentsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
