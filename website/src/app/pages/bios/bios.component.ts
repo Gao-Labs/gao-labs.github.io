@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { people } from 'src/app/consts/bios.const';
+import { FilterByTypePipe } from 'src/app/pipes/filter-by-type.pipe';
 import { Person } from 'src/app/types/Person.type';
-
 
 @Component({
   selector: 'app-bios',
@@ -12,7 +12,22 @@ export class BiosComponent {
 
   imageDir = '../../assets/headshots/';
   public searchValue = ""
+
   
+  getLastName(person: Person): string {
+    const nameParts = person.name.split(' ');
+    return nameParts[nameParts.length - 1];
+  }
+  
+  sortedPeople = people.sort((a, b) => {
+    const lastNameA = this.getLastName(a).toLowerCase(); // Convert to lowercase for case-insensitive comparison
+    const lastNameB = this.getLastName(b).toLowerCase(); // Convert to lowercase for case-insensitive comparison
+    if (lastNameA < lastNameB) return -1;
+    if (lastNameA > lastNameB) return 1;
+    return 0;
+  });
+  
+  filteredPeople = this.sortedPeople
 
   onSearch(searchTerm: string) {
     let tempPeople = people;
@@ -30,6 +45,6 @@ export class BiosComponent {
   }
 
 
-filteredPeople = people
+
 
 }

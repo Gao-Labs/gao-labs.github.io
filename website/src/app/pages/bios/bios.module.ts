@@ -5,11 +5,12 @@ import { ComponentsModule } from 'src/app/components/components.module';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms'; 
+import { FilterByTypePipe } from 'src/app/pipes/filter-by-type.pipe';
 
 
 
 @NgModule({
-  declarations: [BiosComponent],
+  declarations: [BiosComponent, FilterByTypePipe],
   imports: [CommonModule, ComponentsModule, MatInputModule, MatIconModule, FormsModule],
   exports: [BiosComponent],
 })
