@@ -1,5 +1,6 @@
 export type Person = { 
     name: string, 
+    type: "pi" | "postdoc" | "phd" | "masters" | "staff" | ""
     bio: string, 
     title: string, 
     image: string,

@@ -164,8 +164,7 @@ people = df.apply(
 
 people = update_image_field(people, "../website/src/assets/headshots")
 
-# Print new content of bios.const.ts to terminal (content of file can be replaced)
-print("import { Person } from '../types/Person.type'\nexport const people: Person[] =[")
+# Print new content of bios.const.ts to terminal (ONLY ADD NEW ROWS TO END OF FILE -- DO NOT REPLACE CONTENTS OF FILE)
 for p in people:
     print(f"{p},")
 print("]")

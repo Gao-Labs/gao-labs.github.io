@@ -10,7 +10,7 @@ import { Person } from "src/app/types/Person.type";
     styleUrls: ['./bio-card.component.css'],
   })
   export class BioCardComponent {
-    @Input() person: Person = {name: "", bio: "", title: "", image: ""}; 
+    @Input() person: Person = {name: "", type: "", bio: "", title: "", image: ""}; 
 
     constructor(private dialog: MatDialog){}
 
