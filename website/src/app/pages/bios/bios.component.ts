@@ -15,7 +15,8 @@ export class BiosComponent {
 
   
   getLastName(person: Person): string {
-    const nameParts = person.name.split(' ');
+    const name = person.name.replace(", PhD", "")
+    const nameParts = name.split(' ');
     return nameParts[nameParts.length - 1];
   }
   
