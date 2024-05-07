@@ -6,7 +6,8 @@
   <h1>Lab Members</h1>
   <h2>Core Team</h2>
   <div class="card-container">
-    <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['postdoc', 'pi', 'staff']" [person]="person"/>
+    <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['pi']" [person]="person"/>
+    <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['postdoc', 'staff']" [person]="person"/>
   </div>
   <h2>PhD Students</h2>
   <div class="card-container">

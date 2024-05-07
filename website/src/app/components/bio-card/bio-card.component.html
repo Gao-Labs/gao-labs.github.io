@@ -5,6 +5,9 @@
       <mat-card-subtitle *ngIf="person.role && person.team">{{ person.role }} for {{person.team}}</mat-card-subtitle>
       <mat-card-subtitle *ngIf="person.role && !person.team">{{ person.role }}</mat-card-subtitle>
       <mat-card-subtitle *ngIf="person.team && !person.role">{{person.team}}</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="!person.role && !person.team">
+        &nbsp;
+      </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
     <img mat-card-image
