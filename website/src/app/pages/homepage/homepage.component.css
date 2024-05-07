@@ -1,4 +1,5 @@
 .page {
+  position: relative;
   padding: 20px;
 }
 .card-2 {
@@ -18,4 +19,25 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.cover-image {
+  width: 100%;        /* Optional: Ensure it covers the full container width */
+  z-index: 1;         /* Lower z-index means it will be behind other content */
+}
+
+/* Project cards are absolutely positioned, which is nasty. Fix this someday */
+.project-card {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2;
+  position: absolute;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.pps {
+  top: 400px; /* Adjust this value based on where you need the card to appear relative to the top of page */
 }
