@@ -31,7 +31,7 @@ import { Person } from "src/app/types/Person.type";
     
     handleImageError(event: any) {
       console.log('Failed to load image', event);
-      event.target.src = '../../../assets/headshots/default_headshot.jpeg';
+      event.target.src = '../../../assets/default_headshot.jpeg';
     }
       
       

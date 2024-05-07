@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 
 
@@ -18,6 +19,39 @@ def convert_drive_link_to_direct_image_url(link):
     prefix = "https://drive.google.com/uc?export=view&id="
     file_id = link.split("id=")[-1]
     return f"{prefix}{file_id}"
+
+
+def clean_name(first_name, last_name):
+    # Define titles to remove
+    titles = ["Dr.", "Mr.", "Ms.", "Mrs."]
+    first_name = first_name.strip()
+    last_name = last_name.strip()
+
+    # Remove titles and extra spaces
+    for title in titles:
+        if first_name.startswith(title):
+            first_name = first_name[len(title) :].strip()
+
+
+def update_image_field(people, headshots_directory):
+    # Update 'image' field by searching in the specified directory
+    updated_people = []
+    for person in people:
+        print(person["name"])
+        # Search for matching files
+        matched_files = [
+            f for f in os.listdir(headshots_directory) if person["name"] in f
+        ]
+        if matched_files:
+            # Update the image field with the first match found
+            print(f"Match files: {matched_files}")
+            person["image"] = os.path.join(headshots_directory, matched_files[0])
+        else:
+            person["image"] = None
+        updated_people.append(person)
+
+    # Return the updated list of dictionaries
+    return updated_people
 
 
 # Load the CSV file into a DataFrame
@@ -127,6 +161,8 @@ people = df.apply(
     },
     axis=1,
 ).tolist()
+
+people = update_image_field(people, "../website/src/assets/headshots")
 
 # Print new content of bios.const.ts to terminal (content of file can be replaced)
 print("import { Person } from '../types/Person.type'\nexport const people: Person[] =[")
