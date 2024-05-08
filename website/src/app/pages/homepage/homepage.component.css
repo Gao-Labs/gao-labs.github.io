@@ -41,3 +41,7 @@
 .pps {
   top: 400px; /* Adjust this value based on where you need the card to appear relative to the top of page */
 }
+
+.actions-container {
+  justify-content: flex-end;
+}
