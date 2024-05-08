@@ -6,7 +6,7 @@ import { PublicationsComponent } from './pages/publications/publications.compone
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
-  { path: 'bios', component: BiosComponent },
+  { path: 'team', component: BiosComponent },
   { path: 'publications', component: PublicationsComponent },
 ];
 

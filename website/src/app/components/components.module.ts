@@ -19,7 +19,6 @@ import { MatIconModule } from '@angular/material/icon';
     BioCardComponent
   ],
   imports: [
-    // other modules
     MatDialogModule,
     MatToolbarModule,
     MatButtonModule,
