@@ -19,7 +19,7 @@ export const people: Person[] =[
   title: 'Programmer',
   team: "uTech",
   role: "PPS Multi-City Developer",
-  bio: 'Erin is one of the staff developers at Gao Labs and a primary contributor to the uTech/PPS projects. She built this website using Angular and TypeScript.',
+  bio: 'Erin is a staff developer and key contributor to the uTech and PPS projects. Leveraging her experience in full-stack development, she also created this website from scratch using Angular and regularly assists the CAT team with various projects. Her skills include Python, Pandas, and web/mobile development with TypeScript, React (Native), and Angular.',
   image: imageDir + 'erinheadshot3.JPG',
   linkedinUrl: "https://www.linkedin.com/in/erinmurphy843/",
   githubUrl: "https://github.com/em843",
