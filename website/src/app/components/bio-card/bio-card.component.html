@@ -11,8 +11,7 @@
     </mat-card-header>
     <mat-card-content>
     <img mat-card-image
-      class="headshot-image"
-      mat-card-image
+      class="w-48 h-48 ph-4 m-auto border-gray-300 border"
       src="{{ person.image }}"
       alt="Professional headshot of {{ person.name }}"
       (error)="handleImageError($event)"
