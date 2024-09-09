@@ -7,14 +7,23 @@
   <h2>Core Team</h2>
   <div class="card-container">
     <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['pi']" [person]="person"/>
+    <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['faculty']" [person]="person"/>
     <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['postdoc', 'staff']" [person]="person"/>
   </div>
+  <hr>
   <h2>PhD Students</h2>
   <div class="card-container">
     <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['phd']" [person]="person"/>
   </div>
+  <hr>
   <h2>Master's Students</h2>
   <div class="card-container">
     <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['masters']" [person]="person"/>
   </div>
+  
+  <h2>Former Contributors</h2>
+  <div class="card-container">
+    <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['former']" [person]="person"/>
+  </div>
+
 </div>
