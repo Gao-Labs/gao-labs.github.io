@@ -8,7 +8,8 @@
   <div class="card-container">
     <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['pi']" [person]="person"/>
     <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['faculty']" [person]="person"/>
-    <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['postdoc', 'staff']" [person]="person"/>
+    <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['postdoc']" [person]="person"/>
+    <app-bio-card *ngFor="let person of filteredPeople | filterByType: ['staff']" [person]="person"/>
   </div>
   <hr>
   <h2>PhD Students</h2>
